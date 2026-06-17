@@ -1,10 +1,10 @@
 const SITE = {
-    name: "YOUR_NAME",
-    title: "YOUR_POSITION",
-    email: "you@email.com",
-    github: "#",
+    name: "Marco Vandone",
+    title: "R&D Chemistry and Microbiology Specialist",
+    email: "marco.vandone@gmail.com",
+    github: "https://github.com/MarcoVando",
     linkedin: "#",
-    scholar: "#",
+    scholar: "https://scholar.google.com/citations?user=q60koSwAAAAJ&hl=it",
     cv: "assets/cv.pdf",
 
     about: `
@@ -16,9 +16,9 @@ const SITE = {
 
 const EDUCATION = [
 {
-    title: "PhD in Computer Science",
-    organization: "University Name",
-    years: "2024 - Present",
+    title: "PhD in Chemistry",
+    organization: "University of Milan",
+    years: "2021 - 2025",
     description: "Research description"
 },
 {
