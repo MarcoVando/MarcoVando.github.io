@@ -1,1 +1,537 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YOUR_NAME</title>
+<meta name="description" content="Personal academic homepage">
+
+<style>
+:root{
+    --primary:#1f4e79;
+    --accent:#2563eb;
+    --text:#222;
+    --text-light:#555;
+    --bg:#ffffff;
+    --card:#fafafa;
+    --border:#e5e7eb;
+    --max-width:1100px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+a{
+    color:var(--accent);
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:white;
+    border-bottom:1px solid var(--border);
+    z-index:1000;
+}
+
+.nav-inner{
+    max-width:var(--max-width);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 20px;
+}
+
+.nav-name{
+    font-weight:700;
+    font-size:1.1rem;
+}
+
+.nav-links{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:#444;
+    font-size:0.95rem;
+}
+
+.hero{
+    padding:70px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.profile-pic{
+    width:250px;
+    height:250px;
+    border-radius:12px;
+    object-fit:cover;
+    border:1px solid var(--border);
+}
+
+.hero h1{
+    font-size:2.4rem;
+    margin-bottom:8px;
+}
+
+.hero h2{
+    color:var(--primary);
+    font-size:1.2rem;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:var(--text-light);
+    margin-bottom:12px;
+}
+
+.socials{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+section{
+    padding:40px 0;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:var(--primary);
+    border-bottom:2px solid var(--border);
+    padding-bottom:8px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.entry-title{
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+.entry-subtitle{
+    color:var(--text-light);
+    margin-bottom:8px;
+}
+
+.entry-date{
+    color:#777;
+    font-size:0.9rem;
+}
+
+.news-list{
+    list-style:none;
+}
+
+.news-list li{
+    padding:10px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.pub{
+    margin-bottom:22px;
+}
+
+.pub-title{
+    font-weight:600;
+}
+
+.pub-authors{
+    color:var(--text-light);
+}
+
+.pub-links{
+    margin-top:6px;
+}
+
+footer{
+    text-align:center;
+    padding:50px 0;
+    color:#777;
+    border-top:1px solid var(--border);
+    margin-top:40px;
+}
+
+@media (max-width: 768px){
+
+.hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.profile-pic{
+    margin:auto;
+}
+
+.nav-inner{
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-links{
+    justify-content:center;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- ========================= -->
+<!-- NAVIGATION -->
+<!-- ========================= -->
+
+<nav>
+    <div class="nav-inner">
+        <div class="nav-name">YOUR_NAME</div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education & Experience</a>
+            <a href="#awards">Awards</a>
+            <a href="#projects">Projects</a>
+            <a href="#news">News</a>
+            <a href="#publications">Publications</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ========================= -->
+<!-- ABOUT & CONTACT -->
+<!-- ========================= -->
+
+<section id="about" class="hero">
+    <div class="container">
+        <div class="hero-grid">
+
+            <img
+                src="images/profile.jpg"
+                alt="Profile Photo"
+                class="profile-pic"
+            >
+
+            <div>
+
+                <!-- EDIT -->
+                <h1>YOUR_NAME</h1>
+
+                <!-- EDIT -->
+                <h2>YOUR_POSITION</h2>
+
+                <!-- EDIT -->
+                <p>
+                    YOUR_BIO_PARAGRAPH_1
+                </p>
+
+                <!-- EDIT -->
+                <p>
+                    YOUR_BIO_PARAGRAPH_2
+                </p>
+
+                <!-- EDIT -->
+                <p>
+                    YOUR_BIO_PARAGRAPH_3
+                </p>
+
+                <div class="socials">
+
+                    <a href="YOUR_EMAIL_LINK">
+                        Email
+                    </a>
+
+                    <a href="YOUR_GITHUB_LINK">
+                        GitHub
+                    </a>
+
+                    <a href="YOUR_LINKEDIN_LINK">
+                        LinkedIn
+                    </a>
+
+                    <a href="YOUR_TWITTER_LINK">
+                        Twitter/X
+                    </a>
+
+                    <a href="YOUR_CV_LINK">
+                        CV
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================= -->
+<!-- EDUCATION & EXPERIENCE -->
+<!-- ========================= -->
+
+<section id="education">
+    <div class="container">
+
+        <h2 class="section-title">
+            Education & Experience
+        </h2>
+
+        <div class="card">
+            <div class="entry-title">
+                DEGREE / POSITION
+            </div>
+
+            <div class="entry-subtitle">
+                UNIVERSITY / COMPANY
+            </div>
+
+            <div class="entry-date">
+                YEAR – YEAR
+            </div>
+
+            <p>
+                Description...
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="entry-title">
+                DEGREE / POSITION
+            </div>
+
+            <div class="entry-subtitle">
+                UNIVERSITY / COMPANY
+            </div>
+
+            <div class="entry-date">
+                YEAR – YEAR
+            </div>
+
+            <p>
+                Description...
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================= -->
+<!-- AWARDS -->
+<!-- ========================= -->
+
+<section id="awards">
+    <div class="container">
+
+        <h2 class="section-title">
+            Awards
+        </h2>
+
+        <div class="card">
+            <strong>AWARD_NAME</strong><br>
+            Organization • Year
+        </div>
+
+        <div class="card">
+            <strong>AWARD_NAME</strong><br>
+            Organization • Year
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- ========================= -->
+
+<section id="projects">
+    <div class="container">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <div class="card">
+            <div class="entry-title">
+                PROJECT_NAME
+            </div>
+
+            <p>
+                Project description.
+            </p>
+
+            <p>
+                <a href="#">
+                    Project Page
+                </a>
+                |
+                <a href="#">
+                    GitHub
+                </a>
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="entry-title">
+                PROJECT_NAME
+            </div>
+
+            <p>
+                Project description.
+            </p>
+
+            <p>
+                <a href="#">
+                    Project Page
+                </a>
+                |
+                <a href="#">
+                    GitHub
+                </a>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================= -->
+<!-- NEWS -->
+<!-- ========================= -->
+
+<section id="news">
+    <div class="container">
+
+        <h2 class="section-title">
+            News
+        </h2>
+
+        <ul class="news-list">
+
+            <li>
+                <strong>Month Year</strong> —
+                News item goes here.
+            </li>
+
+            <li>
+                <strong>Month Year</strong> —
+                News item goes here.
+            </li>
+
+            <li>
+                <strong>Month Year</strong> —
+                News item goes here.
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+<!-- ========================= -->
+<!-- PUBLICATIONS -->
+<!-- ========================= -->
+
+<section id="publications">
+    <div class="container">
+
+        <h2 class="section-title">
+            Publications
+        </h2>
+
+        <div class="pub">
+
+            <div class="pub-title">
+                PAPER_TITLE
+            </div>
+
+            <div class="pub-authors">
+                Authors
+            </div>
+
+            <div>
+                Conference / Journal, Year
+            </div>
+
+            <div class="pub-links">
+                <a href="#">Paper</a> |
+                <a href="#">Code</a> |
+                <a href="#">Project</a>
+            </div>
+
+        </div>
+
+        <div class="pub">
+
+            <div class="pub-title">
+                PAPER_TITLE
+            </div>
+
+            <div class="pub-authors">
+                Authors
+            </div>
+
+            <div>
+                Conference / Journal, Year
+            </div>
+
+            <div class="pub-links">
+                <a href="#">Paper</a> |
+                <a href="#">Code</a> |
+                <a href="#">Project</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © <span id="year"></span> YOUR_NAME
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
