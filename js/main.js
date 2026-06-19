@@ -3,8 +3,9 @@ const $ = id => document.getElementById(id);
 $("siteName").textContent = SITE.name;
 $("name").textContent = SITE.name;
 $("title").textContent = SITE.title;
-
+$("small_description").textContent = SITE.small_description;
 $("aboutContent").innerHTML = SITE.about;
+$("small_description").textContent = SITE.small_description;
 
 $("emailLink").href = `mailto:${SITE.email}`;
 $("githubLink").href = SITE.github;
@@ -23,7 +24,19 @@ EDUCATION.forEach(item=>{
     `;
 });
 
-AWARDS.forEach(item=>{
+EXPERIENCE.forEach(item=>{
+    $("experienceContent").innerHTML += `
+        <div class="card">
+            <h3>${item.title}</h3>
+            <p>${item.organization}</p>
+            <p><img src="${item.logo}" alt="${item.organization}" width="100"></p>
+            <p>${item.years}</p>
+            <p>${item.description}</p>
+        </div>
+    `;
+});
+
+AWARDS_PRIZES.forEach(item=>{
     $("awardsContent").innerHTML += `
         <div class="card">
             ${item.name} (${item.year})
