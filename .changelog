@@ -1,0 +1,65 @@
+# Changelog
+
+## 2026-06-26
+
+### Sidebar → Central Hero Panel
+- Moved `<aside class="sidebar">` out of the grid layout, above the main content
+- Transformed into a centered floating card (`.sidebar.hero`):
+  - Centered horizontally with `max-width: 600px; margin: 60px auto`
+  - Card background (`var(--surface)`), rounded corners (24px), box shadow
+  - Profile picture made circular (`border-radius: 50%`), 150×150px with border and shadow
+  - Links reorganized from vertical column to horizontal centered row
+  - Download CV button changed to `display: inline-block` with `padding: 8px 20px; font-size: 14px`
+
+### Layout Change
+- `.layout` changed from 2-column CSS grid (`320px 1fr`) to single-column centered layout (`max-width: 900px; margin: 0 auto`)
+- Mobile media query adjusted accordingly
+
+### Collapsible Text with Arrow Toggle
+- Added `TEXT_COLLAPSE_LINES` constant in `js/data.js` (default: 3 lines)
+- Collapsible content implemented for:
+  - **About & Contact** section — arrow icon on the right of the `h2` header
+  - **Education** cards — arrow icon on the right of each card title
+  - **Experience** cards — arrow icon on the right of each card title
+- Uses `images/down_arrow.png` as the toggle icon
+- Arrow rotates 180° when expanded via CSS `transform: rotate(180deg)`
+- CSS classes added: `.section-header`, `.card-header`, `.toggle-arrow`, `.collapsible-content.collapsed`
+
+### Markdown-driven News & Projects Cards
+- Created `news/` and `Projects/` folders for `.md` files
+- Each `.md` file uses YAML frontmatter: `title`, `date`, `image` (optional)
+- Added `NEWS_FILES` and `PROJECTS_FILES` arrays in `js/data.js` listing the `.md` files
+- `js/main.js`:
+  - `parseFrontmatter()` — extracts YAML frontmatter from `.md` files
+  - `mdToHTML()` — converts basic markdown (bold, italic, links, images, lists, headers) to HTML
+  - `loadMarkdownList()` — fetches each `.md` file, parses it, and renders cards in a grid
+- Layout: image in top half, title/date/description in bottom half
+- If no `image` is specified in frontmatter, a lightblue placeholder (`#dbeafe`) is shown instead
+- `news-grid` and `project-grid` share the same responsive card layout
+- Added CSS: `.news-grid`, `.news-card`, `.card-content`, `.card-date`, `.card-description`, `.card-img-placeholder`
+
+### Link icons & hero card centering
+- Replaced text links (Email, GitHub, LinkedIn, Scholar) in hero card with 24×24px icon images (`images/mail.png`, `github.png`, `linkedin.png`, `scholar.png`)
+- Added hover opacity effect on icon links
+- Added `width: 100%` to hero card to ensure proper centering
+
+### Institution logos in Education & Experience cards
+- Added `logo` field to EDUCATION entries pointing to `images/logos/`
+- Fixed EXPERIENCE logo paths from `images/organizations/` to `images/logos/`
+- Cards now show a 40×40px logo on the left of each card header
+- Added CSS: `.institution-logo`
+
+### Smaller news/project cards with text truncation
+- Reduced card image height from 220px to 120px
+- Reduced card content padding to 14px, smaller font sizes
+- Description text truncated at 3 lines with ellipsis (`-webkit-line-clamp: 3`)
+- Smaller border radius (8px instead of 12px)
+
+### Publication filter buttons — text-only
+- Removed borders and button background from year filter buttons
+- Now displayed as underlined accent-colored text links
+
+### Awards — single card with 3-column grid
+- Replaced individual cards with a single `.card` containing a 3-column grid (`.awards-grid`)
+- Each award shows name + year in a compact list layout
+- Added CSS: `.awards-grid`, `.award-item`

@@ -54,12 +54,9 @@ color:var(--text);
 }
 
 .layout{
-max-width:1400px;
-margin:auto;
-display:grid;
-grid-template-columns:320px 1fr;
-gap:50px;
-padding:40px;
+max-width:900px;
+margin:0 auto;
+padding:0 40px 60px;
 }
 
 .sidebar{
@@ -68,27 +65,58 @@ top:100px;
 height:max-content;
 }
 
+.sidebar.hero{
+position:static;
+width:100%;
+height:auto;
+text-align:center;
+max-width:600px;
+margin:60px auto 40px;
+padding:50px 40px;
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:24px;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+
 .profile-image{
-width:50%;
-border-radius:14px;
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
 margin-bottom:20px;
+border:4px solid var(--bg);
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .links{
 display:flex;
-flex-direction:column;
-gap:10px;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+gap:16px;
 margin:20px 0;
 }
 
+.links a img{
+width:24px;
+height:24px;
+transition:opacity 0.2s ease;
+}
+
+.links a img:hover{
+opacity:0.7;
+}
+
 .cv-btn{
-display:block;
-padding:12px;
+display:inline-block;
+padding:8px 20px;
 background:var(--accent);
 color:white;
 text-align:center;
-border-radius:10px;
+border-radius:8px;
 text-decoration:none;
+font-size:14px;
 }
 
 main section{
@@ -107,27 +135,148 @@ border-radius:12px;
 margin-bottom:15px;
 }
 
-.project-grid{
+.awards-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.award-item{
+font-size:0.9em;
+line-height:1.4;
+padding:8px 0;
+border-bottom:1px solid var(--border);
+}
+
+.award-item:last-child{
+border-bottom:none;
+}
+
+.section-header,
+.card-header{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.section-header{
+justify-content:space-between;
+}
+
+.card-header{
+justify-content:space-between;
+}
+
+.card-header > div{
+flex:1;
+margin-left:4px;
+}
+
+.section-header h2,
+.card-header h3{
+margin-bottom:0;
+}
+
+.institution-logo{
+width:40px;
+height:40px;
+object-fit:contain;
+border-radius:4px;
+flex-shrink:0;
+}
+
+.toggle-arrow{
+width:20px;
+height:20px;
+cursor:pointer;
+transition:transform 0.3s ease;
+flex-shrink:0;
+}
+
+.toggle-arrow.expanded{
+transform:rotate(180deg);
+}
+
+.collapsible-content.collapsed{
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:var(--collapse-lines, 3);
+overflow:hidden;
+}
+
+.project-grid,
+.news-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:20px;
 }
 
-.project-card{
+.project-card,
+.news-card{
 background:var(--surface);
 border:1px solid var(--border);
-border-radius:12px;
+border-radius:8px;
 overflow:hidden;
 }
 
-.project-card img{
+.project-card img,
+.news-card img{
 width:100%;
-height:220px;
+height:120px;
 object-fit:cover;
 }
 
 .project-content{
-padding:20px;
+padding:14px;
+}
+
+.card-content{
+padding:14px;
+}
+
+.card-content h3{
+margin-bottom:4px;
+font-size:0.95em;
+}
+
+.card-date{
+font-size:0.8em;
+color:var(--accent);
+margin-bottom:4px;
+}
+
+.card-description{
+font-size:0.85em;
+line-height:1.4;
+color:var(--text);
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:3;
+overflow:hidden;
+}
+
+.card-description p{
+margin-bottom:4px;
+}
+
+.card-description ul{
+margin:4px 0;
+padding-left:16px;
+}
+
+.card-description li{
+margin-bottom:2px;
+}
+
+.card-img-placeholder{
+width:100%;
+height:120px;
+background:#dbeafe;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#1e40af;
+font-size:0.85em;
 }
 
 .timeline-item{
@@ -154,20 +303,42 @@ border-radius:8px;
 }
 
 .filter-btn{
-padding:8px 14px;
-margin-right:8px;
-margin-bottom:20px;
+background:none;
+border:none;
+padding:6px 10px;
+margin-right:4px;
+margin-bottom:8px;
 cursor:pointer;
+font-size:0.95em;
+color:var(--accent);
+text-decoration:underline;
+text-underline-offset:3px;
+opacity:0.6;
+transition:opacity 0.2s;
+}
+
+.filter-btn:hover{
+opacity:1;
 }
 
 @media(max-width:900px){
 
 .layout{
-grid-template-columns:1fr;
+padding:0 20px 40px;
 }
 
-.sidebar{
-position:relative;
-top:0;
+.sidebar.hero{
+margin:40px 20px;
+padding:30px 24px;
+}
+
+.profile-image{
+width:120px;
+height:120px;
+}
+
+.links{
+flex-wrap:wrap;
+gap:12px;
 }
 }
