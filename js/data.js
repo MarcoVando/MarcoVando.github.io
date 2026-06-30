@@ -1,9 +1,9 @@
 const TEXT_COLLAPSE_LINES = 3;
 
 const NEWS_FILES = [
-    "news/paper-accepted.md",
-    "news/conference-talk.md",
-    "news/final-view-phd.md",
+    "news/paper-accepted.html",
+    "news/conference-talk.html",
+    "news/final-view-phd.html",
 ];
 
 const PROJECTS_FILES = [
