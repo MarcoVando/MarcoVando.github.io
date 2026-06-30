@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Invited talk at E-MRS 2026"
 date: "May 2026"
 image: "images/news/conference.jpg"
