@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: post
 title: "Invited talk at E-MRS 2026"
-date: "May 2026"
+date: 2026-05-11
 image: "images/news/conference.jpg"
 ---
 
